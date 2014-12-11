@@ -216,8 +216,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chats_me" width="16" height="35"/>
-        <image name="chats_you" width="16" height="32"/>
+        <image name="chats_me" width="68" height="40"/>
+        <image name="chats_you" width="68" height="40"/>
         <image name="me" width="198" height="200"/>
         <image name="you" width="211" height="211"/>
     </resources>
