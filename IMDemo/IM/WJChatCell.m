@@ -10,7 +10,8 @@
 
 #import "WJChatFrame.h"
 
-#import "UIImage+Ljj.h"
+//代码拉伸
+//#import "UIImage+Ljj.h"
 
 //经常用到保存在内存
 static UIImage *SenderTextNodeBkg;
@@ -29,15 +30,17 @@ static UIImage *ReceiverTextNodeBkg;
 
 
 - (void)awakeFromNib {
-    if (!SenderTextNodeBkg) {
-        [[self class] cellLoadImage];
-    }
+    //代码拉伸
+//    if (!SenderTextNodeBkg) {
+//        [[self class] cellLoadImage];
+//    }
 }
 
-+ (void)cellLoadImage {
-    SenderTextNodeBkg = [UIImage resizingImageWithNamed:@"chats_me" xPic:0.5 yPic:0.53];
-    ReceiverTextNodeBkg = [UIImage resizingImageWithNamed:@"chats_you" xPic:0.5 yPic:0.53];
-}
+//代码拉伸
+//+ (void)cellLoadImage {
+//    SenderTextNodeBkg = [UIImage resizingImageWithNamed:@"chats_me" xPic:0.5 yPic:0.53];
+//    ReceiverTextNodeBkg = [UIImage resizingImageWithNamed:@"chats_you" xPic:0.5 yPic:0.53];
+//}
 
 - (void)setChatFrame:(WJChatFrame *)chatFrame {
     _chatFrame = chatFrame;
@@ -56,13 +59,13 @@ static UIImage *ReceiverTextNodeBkg;
     self.chatConstraintH.constant = titleSize.height;
     
     
-    
-    if (!chatFrame.isMe) {
-        [self.backgroundImageView setImage:ReceiverTextNodeBkg];
-        self.nameLabel.textAlignment = NSTextAlignmentLeft;
-    } else {
-        [self.backgroundImageView setImage:SenderTextNodeBkg];
-        self.nameLabel.textAlignment = NSTextAlignmentRight;
-    }
+    //代码拉伸
+//    if (!chatFrame.isMe) {
+//        [self.backgroundImageView setImage:ReceiverTextNodeBkg];
+//        self.nameLabel.textAlignment = NSTextAlignmentLeft;
+//    } else {
+//        [self.backgroundImageView setImage:SenderTextNodeBkg];
+//        self.nameLabel.textAlignment = NSTextAlignmentRight;
+//    }
 }
 @end

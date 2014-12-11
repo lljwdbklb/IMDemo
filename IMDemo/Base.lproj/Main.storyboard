@@ -42,7 +42,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wb4-Em-Ovb" id="lgf-cb-dBf">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me.png" translatesAutoresizingMaskIntoConstraints="NO" id="hC5-ha-wiw">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="hC5-ha-wiw">
                                                     <rect key="frame" x="550" y="10" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="FYh-fp-uvK"/>
@@ -52,7 +52,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpY-Xq-qRy">
                                                     <rect key="frame" x="242" y="10" width="300" height="45"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bjL-Co-Nfn">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chats_me" translatesAutoresizingMaskIntoConstraints="NO" id="bjL-Co-Nfn">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
                                                         </imageView>
                                                     </subviews>
@@ -88,7 +88,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZfU-7c-Fr3" id="JYh-zj-1a3">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="you.png" translatesAutoresizingMaskIntoConstraints="NO" id="5K5-Us-mHm">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="you" translatesAutoresizingMaskIntoConstraints="NO" id="5K5-Us-mHm">
                                                     <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="Ba9-2x-oKG"/>
@@ -107,7 +107,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vA-cI-uHw">
                                                     <rect key="frame" x="58" y="31" width="300" height="45"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kTH-Cp-eUX">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chats_you" translatesAutoresizingMaskIntoConstraints="NO" id="kTH-Cp-eUX">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
                                                         </imageView>
                                                     </subviews>
@@ -216,7 +216,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="me.png" width="198" height="200"/>
-        <image name="you.png" width="211" height="211"/>
+        <image name="chats_me" width="16" height="35"/>
+        <image name="chats_you" width="16" height="32"/>
+        <image name="me" width="198" height="200"/>
+        <image name="you" width="211" height="211"/>
     </resources>
 </document>

@@ -12,6 +12,8 @@
 - (instancetype)initWithMsg:(id)msg;
 @property(copy, nonatomic)id msg;
 
++ (NSDictionary *)emoDict;
+
 @property (readonly, nonatomic) NSString *identifier;
 @property (readonly, assign, nonatomic, getter=isMe) BOOL me;
 @property (readonly,copy,nonatomic)NSDictionary *frameParams;

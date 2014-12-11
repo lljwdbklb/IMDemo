@@ -28,7 +28,22 @@
 #define WJContentRight 10 //文本内容与按钮右边缘间隔
 #define WJContentNameH 18
 
+static NSDictionary *emoDict;
+
 @implementation WJChatFrame
+
++ (NSDictionary *)emoDict {
+    if (!emoDict) {
+//        NSLog(@"%@",[[NSBundle mainBundle]pathForResource:@"emotions1" ofType:@"plist"]);
+        emoDict = [NSMutableDictionary dictionary];
+        NSArray *array = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"emotions1" withExtension:@"plist"]];
+        for (NSDictionary *dict in array) {
+            [(NSMutableDictionary *)emoDict setObject:dict[@"icon"] forKey:dict[@"phrase"]];
+        }
+    }
+    return emoDict;
+}
+
 - (instancetype)initWithMsg:(id)msg {
     if (self = [super init]) {
         self.msg = msg;
@@ -49,7 +64,7 @@
     CGFloat contentW = 0;
     CGFloat contentH = 0;
     
-    NSString *text = [CustomMethod transformString:_msg[@"msg"] emojiDic:nil/*表情*/];
+    NSString *text = [CustomMethod transformString:_msg[@"msg"] emojiDic:[[self class] emoDict]/*表情*/];
     MarkupParser *wk_markupParser = [[MarkupParser alloc] init];
     NSMutableAttributedString* attString = [wk_markupParser attrStringFromMarkup:text];
     [attString setFont:WJContentFont];

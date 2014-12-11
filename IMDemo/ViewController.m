@@ -25,15 +25,17 @@
 
 @implementation ViewController
 
+#pragma mark - view
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
     self.chatList = [NSMutableArray array];
     NSString *msg = @"你妹";
+    
     for(int i = 0; i < 20; i++) {
         int type = arc4random_uniform(2);//判断是谁
-        msg = [msg stringByAppendingString:@"呵呵呵呵"];
+        msg = [msg stringByAppendingFormat:@"呵呵呵呵[草泥马]"];
         [self.chatList addObject:[[WJChatFrame alloc]initWithMsg:@{@"type":@(type),@"msg":msg}]];
     }
 }
@@ -63,7 +65,7 @@
     [_textField resignFirstResponder];
 }
 
-#pragma mark- Recognizer delegate
+#pragma mark Recognizer delegate
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
     return YES;
